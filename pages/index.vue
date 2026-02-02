@@ -1,7 +1,7 @@
 <template>
   <div class="home-page overflow-hidden">
     <!-- 1. Hero Section -->
-    <section class="relative min-h-[80vh] flex items-center pt-32 pb-20 bg-[#219b86] overflow-hidden" id="intro">
+    <section class="relative min-h-screen flex items-center pt-32 pb-20 bg-[#219b86] overflow-hidden" id="intro">
       <!-- Abstract Wave Pattern (Using CSS/SVG) -->
       <!-- Brand Icon Background -->
       <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-5 pointer-events-none z-0 select-none">
