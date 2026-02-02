@@ -129,6 +129,7 @@ export default (context) => {
 
             contact_page: {
                 hero_title: 'Contact Us to Turn Your Vision into a Digital Reality',
+                hero_subtitle: 'We are here to help you innovate and grow through advanced technical solutions and a specialized team.',
                 hero_desc: 'We are here to help you innovate and grow through advanced technical solutions and a specialized team.',
                 form_title: 'Send Us a Message',
                 form_desc: 'Fill out the form below and our team will get back to you as soon as possible.',
@@ -221,7 +222,11 @@ export default (context) => {
 
                 tech_stack_title: 'We Use World-Class Technologies',
                 trust_badge_title: 'Trusted By',
-                trust_badge_desc: '+100 Brands'
+                trust_badge_desc: '+100 Brands',
+
+                clients_heading: 'Building Success Together',
+                contact_heading_1: 'Let\'s Build Your',
+                contact_heading_2: 'Digital Future'
             },
 
             nav: {

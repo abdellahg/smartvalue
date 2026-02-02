@@ -1,23 +1,31 @@
 <template>
   <div class="contact-page">
     <!-- Hero Section -->
-    <section class="relative pt-48 pb-32 overflow-hidden">
+    <!-- Hero Section -->
+    <section class="relative pt-48 pb-32 overflow-hidden bg-[#090e16]">
       <div class="absolute inset-0 z-0">
-        <img src="/img/contact/hero.webp" class="w-full h-full object-cover" alt="Contact Hero">
-        <div class="absolute inset-0 bg-[#219b86]/80"></div>
-        <div class="absolute inset-0 bg-gradient-to-b from-[#219b86]/90 via-transparent to-[#090e16]/90"></div>
+        <!-- Darker, richer gradient overlay -->
+        <div class="absolute inset-0 bg-gradient-to-br from-[#090e16] via-[#1a2c38] to-[#219b86]/40 opacity-90"></div>
+        <img src="/img/contact/hero.webp" class="w-full h-full object-cover opacity-40 mix-blend-overlay" alt="Contact Hero">
+
+        <!-- Abstract shapes -->
+        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-[#219b86]/20 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/3"></div>
+        <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-blue-600/10 rounded-full blur-[80px] translate-y-1/3 -translate-x-1/3"></div>
       </div>
+
       <div class="container relative z-10 px-4">
         <div class="max-w-4xl mx-auto text-center wow animate__animated animate__fadeInUp">
-          <div class="inline-block px-4 py-1 rounded-full bg-[#219b86]/10 border border-[#219b86]/20 text-[#219b86] text-sm font-bold mb-6">
+          <div class="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-white/5 border border-white/10 text-white text-sm font-bold mb-8 backdrop-blur-md shadow-lg">
+            <span class="w-2 h-2 rounded-full bg-[#219b86] animate-pulse"></span>
             {{ $t('nav.link_7') }}
           </div>
-          <h1 class="text-2xl md:text-4xl font-black text-white mb-8 leading-tight">
+
+          <h1 class="text-2xl md:text-3xl font-black text-white mb-6 leading-tight drop-shadow-xl">
             {{ $t('contact_page.hero_title') }}
+            <span class="block text-lg md:text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#219b86] to-teal-300 mt-4 leading-relaxed">
+              {{ $t('contact_page.hero_subtitle') }}
+            </span>
           </h1>
-          <p class="text-xl text-white leading-relaxed font-medium">
-            {{ $t('contact_page.hero_desc') }}
-          </p>
         </div>
       </div>
     </section>
@@ -148,6 +156,9 @@
                   </a>
                   <a href="#" class="w-10 h-10 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center hover:bg-[#219b86] hover:text-white transition-all transform hover:-translate-y-1">
                     <i class="fa-brands fa-instagram"></i>
+                  </a>
+                  <a href="https://www.linkedin.com/company/smart-values-co" target="_blank" class="w-10 h-10 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center hover:bg-[#0077b5] hover:text-white transition-all transform hover:-translate-y-1">
+                    <i class="fa-brands fa-linkedin-in"></i>
                   </a>
                   <a :href="`https://wa.me/${$t('footer.phone')}`" target="_blank" class="w-10 h-10 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center hover:bg-[#25D366] hover:text-white transition-all transform hover:-translate-y-1">
                     <i class="fa-brands fa-whatsapp"></i>

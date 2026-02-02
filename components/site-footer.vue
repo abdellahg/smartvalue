@@ -67,7 +67,7 @@ export default {
     return {
       socialMedia: [
         { icon: 'fa-brands fa-x-twitter', link: '#' },
-        { icon: 'fa-brands fa-linkedin-in', link: '#' }
+        { icon: 'fa-brands fa-linkedin-in', link: 'https://www.linkedin.com/company/smart-values-co' }
       ],
       navLinks: [
         { link: 'intro' },

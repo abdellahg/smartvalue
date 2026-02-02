@@ -1,5 +1,5 @@
 <template>
-  <nav class="w-full fixed top-0 left-0 z-50 py-4 bg-white/95 backdrop-blur-sm shadow-sm" id="nav">
+  <nav class="w-full fixed top-0 left-0 z-50 py-4 bg-white/95 backdrop-blur-sm shadow-sm rounded-b-[2rem]" id="nav">
     <div class="container flex justify-between items-center content-center px-4">
       <nuxt-link :to="localePath(`/`)" class="lg:order-1 order-1">
         <img
@@ -107,7 +107,7 @@ export default {
       navLinks: [
         { link: 'intro' },
         { link: 'about', isPage: true },
-        { link: 'services' },
+        { link: 'services', isPage: true },
         { link: 'clients' },
         { link: 'partners' }
       ]

@@ -129,6 +129,7 @@ export default (context) => {
 
             contact_page: {
                 hero_title: 'تواصل معنا لتحويل رؤيتك إلى واقع رقمي',
+                hero_subtitle: 'نحن هنا لمساعدتكم في الابتكار والنمو من خلال حلول تقنية متقدّمة وفريق عمل متخصّص.',
                 hero_desc: 'نحن هنا لمساعدتكم في الابتكار والنمو من خلال حلول تقنية متقدّمة وفريق عمل متخصّص.',
                 form_title: 'أرسل لنا رسالة',
                 form_desc: 'املأ النموذج أدناه وسيقوم فريقنا بالتواصل معك في أقرب وقت ممكن.',
@@ -221,7 +222,11 @@ export default (context) => {
 
                 tech_stack_title: 'نستخدم أحدث التقنيات العالمية',
                 trust_badge_title: 'موثوق من قِبل',
-                trust_badge_desc: '+100 علامة تجارية'
+                trust_badge_desc: '+100 علامة تجارية',
+
+                clients_heading: 'نبني النجاح معاً',
+                contact_heading_1: 'دعنا نبني',
+                contact_heading_2: 'مستقبلك الرقمي'
             },
 
             nav: {
