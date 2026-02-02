@@ -258,19 +258,19 @@ export default {
 
       this.isSubmitting = true;
       try {
-        const payload = {
-          name: this.form.name,
-          mobile: this.form.phone,
-          mobile_code: this.form.mobile_code,
-          gender_id: this.form.gender_id,
-          email: this.form.email,
-          service_code: this.form.service,
-          message: this.form.message,
-          source_code: 'web',
-          role_id: 3
-        };
+        const subject = encodeURIComponent(`Contact Request from ${this.form.name}`);
+        const body = encodeURIComponent(
+          `Name: ${this.form.name}\n` +
+          `Phone: ${this.form.phone}\n` +
+          `Email: ${this.form.email}\n` +
+          `Service: ${this.form.service}\n\n` +
+          `Message:\n${this.form.message}`
+        );
 
-        const res = await this.$axios.post('/lead/register', payload);
+        const mailtoLink = `mailto:info@smart-value.sa?subject=${subject}&body=${body}`;
+
+        // Open mail client
+        window.location.href = mailtoLink;
 
         // Success feedback
         if (this.$toast) {

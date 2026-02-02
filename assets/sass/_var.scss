@@ -4,11 +4,16 @@
   --accent: #959595;
   --light: #fff;
   --dark: #090e16;
-  --font-main: 'Almarai', sans-serif;
+  --font-ar: 'Almarai', sans-serif;
+  --font-en: 'Inter', sans-serif;
 }
 
 body {
-  font-family: var(--font-main);
+  font-family: var(--font-ar);
+}
+
+[dir="ltr"] body {
+  font-family: var(--font-en);
 }
 
 ::-webkit-scrollbar-thumb {
