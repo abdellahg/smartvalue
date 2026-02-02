@@ -206,7 +206,22 @@ export default (context) => {
                 contact_subtitle: 'تواصل معنا',
                 contact_title: 'لنبدأ في بناء قصة نجاحك الرقمية',
                 contact_desc_footer: 'فريقنا جاهز لمساعدتك في أي استفسار أو طلب خدمة.',
-                send_msg: 'إرسال الرسالة'
+                send_msg: 'إرسال الرسالة',
+
+                stats_title: 'إنجازاتنا بالأرقام',
+                stats_subtitle: 'نحن لا نتحدث فقط عن الجودة، بل نثبتها من خلال نتائجنا الملموسة في السوق السعودي.',
+                stat_1_val: '+500',
+                stat_1_label: 'مشروع منجز',
+                stat_2_val: '+10',
+                stat_2_label: 'سنوات خبرة',
+                stat_3_val: '+50',
+                stat_3_label: 'خبير واستشاري',
+                stat_4_val: '100%',
+                stat_4_label: 'رضا العملاء',
+
+                tech_stack_title: 'نستخدم أحدث التقنيات العالمية',
+                trust_badge_title: 'موثوق من قِبل',
+                trust_badge_desc: '+100 علامة تجارية'
             },
 
             nav: {

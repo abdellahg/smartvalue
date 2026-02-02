@@ -206,7 +206,22 @@ export default (context) => {
                 contact_subtitle: 'Contact Us',
                 contact_title: 'Let\'s Start Building Your Digital Success Story',
                 contact_desc_footer: 'Our team is ready to help with any inquiry or service request.',
-                send_msg: 'Send Message'
+                send_msg: 'Send Message',
+
+                stats_title: 'Our Achievements in Numbers',
+                stats_subtitle: 'We don\'t just talk about quality, we prove it through our tangible results in the Saudi market.',
+                stat_1_val: '+500',
+                stat_1_label: 'Projects Delivered',
+                stat_2_val: '+10',
+                stat_2_label: 'Years of Experience',
+                stat_3_val: '+50',
+                stat_3_label: 'Experts & Consultants',
+                stat_4_val: '100%',
+                stat_4_label: 'Client Satisfaction',
+
+                tech_stack_title: 'We Use World-Class Technologies',
+                trust_badge_title: 'Trusted By',
+                trust_badge_desc: '+100 Brands'
             },
 
             nav: {
