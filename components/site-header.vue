@@ -89,15 +89,27 @@ export default {
         // Scroll Spy for Home Page Sections
         if (this.$route.path === this.localePath('/')) {
           const sections = this.navLinks.filter(n => !n.isPage).map(n => n.link);
+          let closestSection = null;
+          let closestDistance = Infinity;
+          
+          // Find the section whose top is closest to the top of the viewport
           for (const section of sections) {
             const el = document.getElementById(section);
             if (el) {
               const rect = el.getBoundingClientRect();
-              if (rect.top <= 100 && rect.bottom >= 100) {
-                this.activeSection = section;
-                break;
+              // Only consider sections that are in or above the viewport
+              if (rect.bottom >= 100) {
+                const distance = Math.abs(rect.top - 100);
+                if (distance < closestDistance) {
+                  closestDistance = distance;
+                  closestSection = section;
+                }
               }
             }
+          }
+          
+          if (closestSection) {
+            this.activeSection = closestSection;
           }
         }
       })

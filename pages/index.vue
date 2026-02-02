@@ -226,7 +226,7 @@
     </section>
 
     <!-- 6. Clients & Partners -->
-    <section class="py-24 bg-white relative" id="clients">
+    <section class="py-12 bg-white relative" id="clients" style="scroll-margin-top: 80px;">
        <div class="absolute inset-0 bg-slate-50/50 skew-y-3 transform origin-bottom-left z-0"></div>
        <!-- Brand Icon Background -->
        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-[0.02] pointer-events-none select-none z-0">
@@ -235,7 +235,7 @@
        <div class="container px-4 relative z-10">
 
          <!-- Clients -->
-         <div class="mb-24 text-center">
+         <div class="mb-8 text-center">
             <div class="inline-block px-4 py-1 rounded-full bg-[#219b86]/10 text-[#219b86] text-sm font-black mb-6 uppercase tracking-widest">{{ $t('home.clients_title') }}</div>
             <h3 class="text-3xl font-black text-slate-900 mb-12">{{ $t('home.clients_heading') }}</h3>
 
@@ -252,7 +252,7 @@
          </div>
 
          <!-- Partners -->
-         <div id="partners" class="text-center">
+         <div id="partners" class="text-center pt-4" style="scroll-margin-top: 40px;">
             <div class="inline-block px-4 py-1 rounded-full bg-slate-100 text-slate-500 text-sm font-black mb-6 uppercase tracking-widest">{{ $t('home.partners_title') }}</div>
 
             <div v-swiper:partnersSwiper="swiperOptions" class="swiper-container pb-12" :key="'partners-'+$i18n.locale" dir="ltr">
@@ -319,6 +319,29 @@ export default {
         { id: 8, file: 'partner_8.webp' }
       ]
     }
+  },
+  mounted() {
+    // Handle hash-based scrolling when page loads
+    this.$nextTick(() => {
+      const hash = this.$route.hash;
+      if (hash) {
+        // Remove the '#' from the hash to get the element ID
+        const targetId = hash.substring(1);
+        const targetElement = document.getElementById(targetId);
+        
+        if (targetElement) {
+          // Add a small delay to ensure the page is fully rendered
+          setTimeout(() => {
+            // Smooth scroll to the target element with offset for fixed header
+            const offsetTop = targetElement.offsetTop - 80;
+            window.scrollTo({
+              top: offsetTop,
+              behavior: 'smooth'
+            });
+          }, 300);
+        }
+      }
+    });
   },
   methods: {
     submitHomeForm() {
