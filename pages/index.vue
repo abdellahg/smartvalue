@@ -3,12 +3,9 @@
     <!-- 1. Hero Section -->
     <section class="relative min-h-[80vh] flex items-center pt-32 pb-20 bg-[#219b86] overflow-hidden" id="intro">
       <!-- Abstract Wave Pattern (Using CSS/SVG) -->
-      <div class="absolute inset-0 opacity-20 pointer-events-none">
-        <svg class="w-full h-full" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0,1000 C300,800 400,1000 1000,800 L1000,0 L0,0 Z" fill="none" stroke="white" stroke-width="2" opacity="0.3"></path>
-          <path d="M0,900 C200,700 500,900 1000,700 L1000,0 L0,0 Z" fill="none" stroke="white" stroke-width="1.5" opacity="0.2"></path>
-          <path d="M0,800 C300,600 600,800 1000,600 L1000,0 L0,0 Z" fill="none" stroke="white" stroke-width="1" opacity="0.1"></path>
-        </svg>
+      <!-- Brand Icon Background -->
+      <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-5 pointer-events-none z-0 select-none">
+        <img src="/img/logo/logo_icon.webp" class="w-[80vw] max-w-[1200px] animate-pulse filter brightness-0 invert" alt="Background Shape">
       </div>
 
       <div class="container relative z-10 px-4">
@@ -34,6 +31,10 @@
     <section class="py-32 bg-white relative overflow-hidden" id="about">
       <!-- Decorative Background Elements -->
       <div class="absolute top-0 right-0 w-1/3 h-full bg-slate-50/50 -skew-x-12 transform origin-top translate-x-20 pointer-events-none"></div>
+      <!-- Brand Icon Background -->
+      <div class="absolute bottom-20 left-10 opacity-[0.03] pointer-events-none select-none">
+        <img src="/img/logo/logo_icon.webp" class="w-96 h-96 -rotate-12" alt="Background Shape">
+      </div>
 
       <div class="container px-4 relative z-10">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
@@ -138,8 +139,12 @@
 
     <!-- 4. Process Section -->
     <!-- 4. Process Section -->
-    <section class="py-24 bg-[#219b86] overflow-hidden">
-      <div class="container px-4">
+    <section class="py-24 bg-[#219b86] overflow-hidden relative">
+      <!-- Brand Icon Background -->
+      <div class="absolute top-0 right-0 opacity-[0.07] pointer-events-none select-none transform translate-x-1/3 -translate-y-1/4">
+        <img src="/img/logo/logo_icon.webp" class="w-[800px] h-[800px] rotate-12 filter brightness-0 invert" alt="Background Shape">
+      </div>
+      <div class="container px-4 relative z-10">
         <!-- Header -->
         <div class="text-center mb-24 wow animate__animated animate__fadeInUp">
           <div class="inline-block px-5 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white text-sm font-black tracking-widest uppercase mb-6">
@@ -223,6 +228,10 @@
     <!-- 6. Clients & Partners -->
     <section class="py-24 bg-white relative" id="clients">
        <div class="absolute inset-0 bg-slate-50/50 skew-y-3 transform origin-bottom-left z-0"></div>
+       <!-- Brand Icon Background -->
+       <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-[0.02] pointer-events-none select-none z-0">
+          <img src="/img/logo/logo_icon.webp" class="w-[1000px] h-[1000px]" alt="Background Shape">
+       </div>
        <div class="container px-4 relative z-10">
 
          <!-- Clients -->
