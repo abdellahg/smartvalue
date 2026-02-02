@@ -258,12 +258,12 @@ export default {
   methods: {
     getServiceIcon(i) {
       const icons = [
-        'chart-pie',
-        'cloud-arrow-up',
         'layer-group',
-        'server',
+        'cloud-arrow-up',
+        'chart-pie',
+        'robot',
         'rss',
-        'robot'
+        'server'
       ];
       return `fa-solid fa-${icons[i-1]}`;
     },

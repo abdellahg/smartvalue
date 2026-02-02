@@ -112,12 +112,12 @@ export default {
   methods: {
     getServiceIcon(i) {
       const icons = [
-        'fa-solid fa-code',
-        'fa-solid fa-shield-halved',
+        'fa-solid fa-network-wired',
         'fa-solid fa-cloud',
-        'fa-solid fa-headset',
+        'fa-solid fa-chart-line',
+        'fa-solid fa-robot',
         'fa-solid fa-microchip',
-        'fa-solid fa-robot'
+        'fa-solid fa-building-columns'
       ];
       return icons[i-1];
     }
