@@ -89,28 +89,24 @@ export default {
         // Scroll Spy for Home Page Sections
         if (this.$route.path === this.localePath('/')) {
           const sections = this.navLinks.filter(n => !n.isPage).map(n => n.link);
-          let closestSection = null;
-          let closestDistance = Infinity;
+          let activeSection = 'intro'; // Default to intro
           
-          // Find the section whose top is closest to the top of the viewport
-          for (const section of sections) {
+          // Find the active section based on scroll position
+          for (let i = sections.length - 1; i >= 0; i--) {
+            const section = sections[i];
             const el = document.getElementById(section);
             if (el) {
               const rect = el.getBoundingClientRect();
-              // Only consider sections that are in or above the viewport
-              if (rect.bottom >= 100) {
-                const distance = Math.abs(rect.top - 100);
-                if (distance < closestDistance) {
-                  closestDistance = distance;
-                  closestSection = section;
-                }
+              // If section's top is at or above the threshold (100px from top)
+              // it means we've scrolled past it, so it should be active
+              if (rect.top <= 150) {
+                activeSection = section;
+                break;
               }
             }
           }
           
-          if (closestSection) {
-            this.activeSection = closestSection;
-          }
+          this.activeSection = activeSection;
         }
       })
     })
