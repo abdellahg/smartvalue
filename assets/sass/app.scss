@@ -84,40 +84,4 @@ button {
   transform: rotate(180deg);
 }
 
-// Font Awesome Fix
-.fa,
-.fab,
-.fas,
-.far,
-.fal,
-.fad,
-.fat,
-.fa-solid,
-.fa-brands,
-.fa-regular {
-  font-family: inherit; // Reset to let FA classes apply their own font
-}
-
-// Ensure FA fonts take precedence over global font resets
-body {
-
-  [class^="fa-"],
-  [class*=" fa-"],
-  .fab,
-  .fas,
-  .fa-solid,
-  .fa-brands {
-    font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
-  }
-
-  .fa-brands,
-  .fab {
-    font-family: "Font Awesome 6 Brands" !important;
-  }
-
-  .fa-solid,
-  .fas {
-    font-family: "Font Awesome 6 Free" !important;
-    font-weight: 900 !important;
-  }
-}
+// Font Awesome icons will now work because the global * font-family reset was removed from _var.scss

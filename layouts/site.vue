@@ -20,7 +20,7 @@ export default {
   mounted() {
     if (process.browser) { Cookies.set(`_source`, this.$route.query._source) }
 
-    this.$store.dispatch(`home/assets`)
+    //this.$store.dispatch(`home/assets`)
   },
 
   head() {

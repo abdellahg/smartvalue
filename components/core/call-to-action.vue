@@ -1,5 +1,5 @@
 <template>
-  <NuxtLink :to="localePath(`/contact`)" class="cta-btn px-6 py-2 rounded-xl bg-[#0067a7] text-white font-bold transition-all hover:bg-[#d90f1b] flex justify-center items-center">
+  <NuxtLink :to="localePath(`/contact`)" class="cta-btn px-6 py-2 rounded-xl bg-[#219b86] text-white font-bold transition-all hover:bg-[#1a7a6a] flex justify-center items-center">
     {{ $t(`nav.call_to_action`) }}
   </NuxtLink>
 </template>

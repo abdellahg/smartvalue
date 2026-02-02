@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: `#D32F2F`,
+        primary: `#219b86`,
         secondary: `#1D293E`,
         gray: `#959595`,
         light: `#fff`,
@@ -13,8 +13,8 @@ module.exports = {
     },
 
     fontFamily: {
-      display: ['Zain', 'sans-serif'],
-      body: ['Zain', 'sans-serif'],
+      display: ['Almarai', 'sans-serif'],
+      body: ['Almarai', 'sans-serif'],
     },
 
     screens: {

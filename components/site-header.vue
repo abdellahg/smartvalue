@@ -14,23 +14,23 @@
           <nuxt-link v-if="nav.isPage" :to="localePath(`/${nav.link}`)" @click="showNav = !showNav"
             :class="[
               'text-base nav-link cursor-pointer font-bold transition-all px-4 py-2 rounded-xl h-12 flex items-center',
-              isLinkActive(nav, i) ? 'bg-[#d90f1b] text-white' : 'text-slate-700 hover:text-[#d90f1b]'
+              isLinkActive(nav, i) ? 'bg-[#219b86] text-white' : 'text-slate-700 hover:text-[#219b86]'
             ]">
             {{ $t(`nav.link_${i+1}`) }}
           </nuxt-link>
 
-          <button v-else-if="$route.path === '/'" v-scroll-to="{el:`#${nav.link}`,offset:-80}" @click="showNav = !showNav"
+          <button v-else-if="$route.path === localePath('/')" v-scroll-to="{el:`#${nav.link}`,offset:-80}" @click="showNav = !showNav"
             :class="[
               'text-base nav-link cursor-pointer font-bold transition-all px-4 py-2 rounded-xl h-12 flex items-center',
-              isLinkActive(nav, i) ? 'bg-[#d90f1b] text-white' : 'text-slate-700 hover:text-[#d90f1b]'
+              isLinkActive(nav, i) ? 'bg-[#219b86] text-white' : 'text-slate-700 hover:text-[#219b86]'
             ]">
             {{ $t(`nav.link_${i+1}`) }}
           </button>
 
-          <nuxt-link v-else :to="localePath(`/`)" @click="showNav = !showNav"
+          <nuxt-link v-else :to="localePath('/') + `#${nav.link}`" @click="showNav = !showNav"
             :class="[
               'text-base nav-link cursor-pointer font-bold transition-all px-4 py-2 rounded-xl h-12 flex items-center',
-              isLinkActive(nav, i) ? 'bg-[#d90f1b] text-white' : 'text-slate-700 hover:text-[#d90f1b]'
+              isLinkActive(nav, i) ? 'bg-[#219b86] text-white' : 'text-slate-700 hover:text-[#219b86]'
             ]">
             {{ $t(`nav.link_${i+1}`) }}
           </nuxt-link>
@@ -54,7 +54,7 @@
           v-if="locale.code !== $i18n.locale"
           :key="locale.code"
           :to="switchLocalePath(locale.code)"
-          class="flex items-center gap-2 text-slate-700 hover:text-[#d90f1b] transition-all font-bold px-3 py-2 rounded-lg hover:bg-slate-50"
+          class="flex items-center gap-2 text-slate-700 hover:text-[#219b86] transition-all font-bold px-3 py-2 rounded-lg hover:bg-slate-50"
         >
           <i class="fas fa-globe text-sm"></i>
           <span>{{ locale.name }}</span>
@@ -84,7 +84,7 @@ export default {
         }
 
         // Scroll Spy for Home Page Sections
-        if (this.$route.path === '/') {
+        if (this.$route.path === this.localePath('/')) {
           const sections = this.navLinks.filter(n => !n.isPage).map(n => n.link);
           for (const section of sections) {
             const el = document.getElementById(section);
@@ -107,10 +107,9 @@ export default {
       navLinks: [
         { link: 'intro' },
         { link: 'about', isPage: true },
-        { link: 'services', isPage: true },
-        { link: 'projects', isPage: true },
-        { link: 'branches', isPage: true },
-        { link: 'blogs', isPage: true }
+        { link: 'services' },
+        { link: 'clients' },
+        { link: 'partners' }
       ]
     }
   },
@@ -119,7 +118,7 @@ export default {
       if (nav.isPage) {
         return this.$route.path.includes(nav.link);
       }
-      if (this.$route.path === '/') {
+      if (this.$route.path === this.localePath('/')) {
         return this.activeSection === nav.link;
       }
       return false;
@@ -148,7 +147,7 @@ export default {
 
     .hamburger {
       svg {
-        stroke: #d90f1b;
+        stroke: #219b86;
         stroke-width: 0.2rem;
         stroke-linecap: round;
         stroke-linejoin: round;
