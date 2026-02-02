@@ -155,6 +155,82 @@ export default (context) => {
                 why_4: 'Speedy Execution and Response'
             },
 
+            privacy: {
+                title: 'Privacy Policy',
+                last_updated: 'Last Updated: 2026',
+                intro: 'Smart Values ​​Company (“we,” or “our Service”) operates the website https://smart-values.sa. This page explains our policies regarding the collection, use, and disclosure of personal data when you use our Service, and the choices available to you regarding this data. As we use your data to improve our Service, you consent to the collection and use of information in accordance with this policy.',
+                s1_title: '1. Collection and Use of Information',
+                s1_desc: 'We collect your data for various purposes, including improving our Service.',
+                s2_title: '2. Types of Data Collected',
+                s2_p1_title: 'a. Personal Data:',
+                s2_p1_desc: 'We ask you to provide us with certain personal information that can be used to contact or identify you (“Personal Data”) while you are using our Service.',
+                s2_p2_title: 'b. Usage Data:',
+                s2_p2_desc: 'We may also collect information about how you access and use the Service (“Usage Data”). Usage data may include information such as your device’s Internet Protocol (IP) address, browser type, browser version, the pages you visited on our service, the date and time of your visit, the time spent on those pages, unique device identifiers, and other personal data.',
+                s3_title: '3. Use of Data',
+                s3_intro: 'https://smart-values.sa uses the type of data collected for various purposes:',
+                s3_list: [
+                    'To provide and maintain the service.',
+                    'To notify you of changes to our service.',
+                    'To allow you to participate in interactive features of our service when you choose to do so.',
+                    'To provide customer care and support.',
+                    'To provide analytics or valuable information so that we can improve the service.',
+                    'To monitor service usage.',
+                    'To detect, prevent, and address technical issues.'
+                ],
+                s4_title: '4. Disclosure of Data',
+                s4_intro: 'Legal Requirements: https://smart-values.sa may disclose your personal data in the reasonable belief that such action is necessary to:',
+                s4_list: [
+                    'Comply with a legal obligation.',
+                    'Protecting and defending the rights or property of Smart Values ​​Company.',
+                    'Preventing or investigating the commission of a potential crime related to the Service.',
+                    'Protecting the safety of users of the Service or the public.',
+                    'Protection against legal liability.'
+                ],
+                s5_title: '5. Data Security',
+                s5_desc: 'The security of your data is important to us, but remember that no method of transmitting data over the Internet or storing it electronically can be guaranteed to be 100% secure. While we strive to use commercially acceptable means to protect your personal data, we cannot guarantee absolute security.',
+                s6_title: '6. Links to Other Sites',
+                s6_desc: 'Our Service may contain links to other sites not operated by Smart Values ​​Company. Please note that if you click on a link to a third party, you will be directed to that party. We also recommend reviewing the privacy policies of each site you visit.',
+                s7_title: '7. Changes to the Privacy Policy',
+                s7_desc: 'We may update this Privacy Policy.',
+                s8_title: '8. Contact Us',
+                s8_desc: 'If you would like more detailed information about our policies or have any questions, please do not hesitate to contact us.'
+            },
+
+            terms: {
+                title: 'Terms and Conditions',
+                intro: 'Please review the following Terms and Conditions carefully before using our website. Your use of this website signifies your full acceptance of these Terms and Conditions. If you do not agree to any of these terms, please do not use the website.',
+                s1_title: '1. Use and Access',
+                s1_list: [
+                    'You must be of legal age to use this website.',
+                    'We reserve the right to suspend or terminate access to the website without prior notice for any violation of these Terms.'
+                ],
+                s2_title: '2. Intellectual Property',
+                s2_list: [
+                    'All content on this website, including text, images, graphics, and trademarks, is the intellectual property of Smart Values Company or its licensee and may not be copied or distributed without prior permission.'
+                ],
+                s3_title: '3. Personal Data',
+                s3_list: [
+                    'Personal data is collected in accordance with our Privacy Policy. Please read the Privacy Policy for more information about how personal data is collected and used.'
+                ],
+                s4_title: '4. Warranty and Disclaimer',
+                s4_list: [
+                    'This website is provided on an "as is" basis without any express or implied warranties.',
+                    'We are not liable for any losses or damages resulting from the use of, or inability to use, the Site.'
+                ],
+                s5_title: '5. Links to Third-Party Websites',
+                s5_list: [
+                    'The Site may contain links to third-party websites, and we are not responsible for the content of these websites.'
+                ],
+                s6_title: '6. Changes to Terms and Conditions',
+                s6_list: [
+                    'We reserve the right to change or modify these Terms and Conditions at any time, and any changes will be posted on this page.'
+                ],
+                s7_title: '7. Contact',
+                s7_list: [
+                    'To contact us or with any questions regarding the Terms and Conditions, please use the email address listed on the Contact Us page.'
+                ]
+            },
+
             home: {
                 title: 'Home',
                 hero_title: 'Professional Tech Solutions with Global Standards',
