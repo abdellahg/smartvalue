@@ -154,17 +154,8 @@
                   <a href="#" class="w-10 h-10 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center hover:bg-[#219b86] hover:text-white transition-all transform hover:-translate-y-1">
                     <i class="fa-brands fa-x-twitter"></i>
                   </a>
-                  <a href="#" class="w-10 h-10 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center hover:bg-[#219b86] hover:text-white transition-all transform hover:-translate-y-1">
-                    <i class="fa-brands fa-instagram"></i>
-                  </a>
                   <a href="https://www.linkedin.com/company/smart-values-co" target="_blank" class="w-10 h-10 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center hover:bg-[#0077b5] hover:text-white transition-all transform hover:-translate-y-1">
                     <i class="fa-brands fa-linkedin-in"></i>
-                  </a>
-                  <a :href="`https://wa.me/${$t('footer.phone')}`" target="_blank" class="w-10 h-10 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center hover:bg-[#25D366] hover:text-white transition-all transform hover:-translate-y-1">
-                    <i class="fa-brands fa-whatsapp"></i>
-                  </a>
-                  <a href="#" class="w-10 h-10 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center hover:bg-[#1877F2] hover:text-white transition-all transform hover:-translate-y-1">
-                    <i class="fa-brands fa-facebook-f"></i>
                   </a>
                 </div>
               </div>
@@ -211,10 +202,12 @@ export default {
         message: ''
       },
       serviceSlugs: [
-        'fire-systems',
-        'maintenance',
-        'fire-supplies',
-        'safety-equipment'
+        'digital-platforms',
+        'cloud-migration',
+        'data-analysis',
+        'ai-robotics',
+        'iot-solutions',
+        'enterprise-solutions'
       ],
       localErrors: {},
       isSubmitting: false

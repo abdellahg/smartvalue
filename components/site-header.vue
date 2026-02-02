@@ -1,7 +1,7 @@
 <template>
   <nav class="w-full fixed top-0 left-0 z-50 py-4 bg-white/95 backdrop-blur-sm shadow-sm rounded-b-[2rem]" id="nav">
     <div class="container flex justify-between items-center content-center px-4">
-      <nuxt-link :to="localePath(`/`)" class="lg:order-1 order-1">
+      <nuxt-link :to="localePath(`/`)" class="lg:order-1 order-1 logo-link">
         <img
         src="/img/logo/logo.webp"
         class="w-48 h-16 object-contain logo"
@@ -48,7 +48,7 @@
         </svg>
       </div>
 
-      <div class="flex items-center content-center lg:order-3 order-3 gap-4">
+      <div class="flex items-center content-center lg:order-3 order-3 gap-4 header-actions">
         <nuxt-link
           v-for="locale in $i18n.locales"
           v-if="locale.code !== $i18n.locale"
@@ -197,39 +197,94 @@ export default {
 
   @media (max-width: 1023px) {
     nav {
-      z-index: 99999 !important;
+      // Ensure the nav container allows the fixed menu to be relative to viewport or properly stacked
+      .container {
+        position: relative;
+        z-index: 52; // Higher than menu
+      }
+
+      // Ensure logo and hamburger stay on top of the menu overlay
+      .logo-link, .hamburger, .header-actions {
+        position: relative;
+        z-index: 53;
+      }
 
       .navbar-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
         width: 100%;
-        height: auto;
-        position: absolute;
-        top: 100%;
-        right: -100%;
-        padding: 20px;
-        background: white;
+        height: 100dvh; // Use dynamic viewport height
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        padding: 120px 20px 40px; // Top padding to clear header
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: flex-start; // Start from top
         align-items: center;
-        z-index: 9;
-        transition: all .4s ease-in-out;
-        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        z-index: 40; // Behind header content but above page content
+        
+        // Transition settings
+        transform: translateY(-100%); // Slide from top or fade
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+        
+        box-shadow: none;
+        border-bottom-left-radius: 2rem;
+        border-bottom-right-radius: 2rem;
 
         &.active-nav {
-          right: 0px;
+          transform: translateY(0);
+          opacity: 1;
+          visibility: visible;
+          right: 0; // Reset relative positioning override
         }
 
         li {
           width: 100%;
-          padding: 10px 0px;
-          border-bottom: 1px solid #f1f5f9;
+          text-align: center;
+          padding: 10px 0;
+          border-bottom: none;
+          transform: translateY(20px);
+          opacity: 0;
+          transition: all 0.3s ease;
+          
+          // Staggered animation delay handled via CSS or just global delay
+          // We can simulate it roughly or just leave it simple
+        }
+        
+        // When active, show list items
+        &.active-nav li {
+           transform: translateY(0);
+           opacity: 1;
+           @for $i from 1 through 6 {
+             &:nth-child(#{$i}) {
+               transition-delay: #{$i * 0.1}s;
+             }
+           }
+        }
 
-          &:last-child {
-            border-bottom: 0px;
+        a, button {
+          font-size: 1.5rem; // Larger font
+          font-weight: 800;
+          color: #0f172a;
+          justify-content: center;
+          width: auto;
+          display: inline-flex;
+          padding: 0.5rem 1.5rem;
+          border-radius: 1rem;
+          
+          &:hover {
+             background: rgba(33, 155, 134, 0.1);
+             color: #219b86;
+             transform: translateY(-2px);
           }
-
-          button, a {
-            justify-content: center;
-            width: 100%;
+          
+          &.bg-\[\#219b86\] { // Active state override
+             background: #219b86 !important;
+             color: white !important;
+             box-shadow: 0 10px 20px -10px rgba(33, 155, 134, 0.5);
           }
         }
       }
