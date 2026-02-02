@@ -11,7 +11,7 @@
 
       <ul class="navbar-nav flex items-center content-center lg:order-2 order-4" :class="showNav ? 'active-nav' : ''">
         <li class="mx-1" v-for="(nav , i) in navLinks" :key="i">
-          <nuxt-link v-if="nav.isPage" :to="localePath(`/${nav.link}`)" @click="showNav = !showNav"
+          <nuxt-link v-if="nav.isPage" :to="localePath(`/${nav.link}`)" @click.native="showNav = false"
             :class="[
               'text-base nav-link cursor-pointer font-bold transition-all px-4 py-2 rounded-xl h-12 flex items-center',
               isLinkActive(nav, i) ? 'bg-[#219b86] text-white' : 'text-slate-700 hover:text-[#219b86]'
@@ -19,7 +19,7 @@
             {{ $t(`nav.link_${i+1}`) }}
           </nuxt-link>
 
-          <button v-else-if="$route.path === localePath('/')" v-scroll-to="{el:`#${nav.link}`,offset:-80}" @click="showNav = !showNav"
+          <button v-else-if="$route.path === localePath('/')" v-scroll-to="{el:`#${nav.link}`,offset:-80}" @click="showNav = false"
             :class="[
               'text-base nav-link cursor-pointer font-bold transition-all px-4 py-2 rounded-xl h-12 flex items-center',
               isLinkActive(nav, i) ? 'bg-[#219b86] text-white' : 'text-slate-700 hover:text-[#219b86]'
@@ -27,7 +27,7 @@
             {{ $t(`nav.link_${i+1}`) }}
           </button>
 
-          <nuxt-link v-else :to="localePath('/') + `#${nav.link}`" @click="showNav = !showNav"
+          <nuxt-link v-else :to="localePath('/') + `#${nav.link}`" @click.native="showNav = false"
             :class="[
               'text-base nav-link cursor-pointer font-bold transition-all px-4 py-2 rounded-xl h-12 flex items-center',
               isLinkActive(nav, i) ? 'bg-[#219b86] text-white' : 'text-slate-700 hover:text-[#219b86]'
@@ -36,15 +36,15 @@
           </nuxt-link>
         </li>
         <li class="w-full lg:hidden mt-4 flex justify-center">
-           <call-to-action />
+           <call-to-action @click.native="showNav = false" />
         </li>
       </ul>
 
       <div
-        class="hamburger lg:hidden order-2 ml-auto"
+        class="hamburger lg:hidden order-2"
         :class="showNav ? 'active' : ''"
         @click="showNav = !showNav">
-        <svg viewBox="0 0 70 70" class="w-10 h-10">
+        <svg viewBox="-3 -11 70 70" class="w-10 h-10">
           <path d="M19,15 L45,15 C70,15 58,-2 49.0177126,7 L19,37"></path>
           <path d="M19,24 L45,24 C61.2371586,24 57,49 41,33 L32,24"></path>
           <path d="M45,33 L19,33 C-8,33 6,-2 22,14 L45,37"></path>
@@ -221,10 +221,9 @@ export default {
         background: rgba(255, 255, 255, 0.95);
         backdrop-filter: blur(15px);
         -webkit-backdrop-filter: blur(15px);
-        padding: 120px 20px 40px; // Top padding to clear header
+        padding: 100px 20px 40px; // Top padding to clear header area
         flex-direction: column;
-        justify-content: flex-start; // Start from top
-        align-items: center;
+        align-items: center; // Align items horizontally
         z-index: 40; // Behind header content but above page content
         
         // Transition settings
