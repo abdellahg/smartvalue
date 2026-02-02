@@ -35,6 +35,9 @@
             {{ $t(`nav.link_${i+1}`) }}
           </nuxt-link>
         </li>
+        <li class="w-full lg:hidden mt-4 flex justify-center">
+           <call-to-action />
+        </li>
       </ul>
 
       <div
@@ -59,7 +62,7 @@
           <i class="fas fa-globe text-sm"></i>
           <span>{{ locale.name }}</span>
         </nuxt-link>
-        <call-to-action />
+        <call-to-action class="hidden lg:flex" />
       </div>
     </div>
   </nav>
