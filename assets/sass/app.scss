@@ -1,0 +1,123 @@
+@import "var";
+@import "reset";
+@import "util";
+@import "animations";
+
+html[dir="ltr"] {
+
+  .swiper-button-prev {
+    right: calc(50% - 56px) !important;
+    left: unset !important;
+  }
+
+  .swiper-button-next {
+    left: calc(50% - 56px) !important;
+    right: unset !important;
+  }
+}
+
+button {
+
+  &:focus,
+  &:hover,
+  &:visited {
+    outline: none !important;
+  }
+}
+
+.swiper-container {
+  padding-bottom: 70px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  transform: translateY(0px) !important;
+  overflow: hidden;
+  top: unset !important;
+  bottom: 5px;
+  box-shadow: 0px 0px 10px rgba($color: #40BFBA, $alpha: 0.2);
+
+  &::after,
+  &::before {
+    content: '' !important;
+    position: absolute !important;
+    width: 100% !important;
+    top: 0px !important;
+    left: 0px !important;
+  }
+
+  &::after {
+    height: 100% !important;
+    background: url('/img/slide_arrow.svg') center / 30% 30% no-repeat !important;
+    filter: invert(72%) sepia(15%) saturate(1550%) hue-rotate(129deg) brightness(89%) contrast(85%);
+  }
+
+  &::before {
+    background-color: var(--primary);
+    height: 0% !important;
+    transition: all .2s linear;
+  }
+
+  &:hover {
+    &::after {
+      filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(215deg) brightness(107%) contrast(101%);
+    }
+
+    &::before {
+      height: 100% !important;
+    }
+  }
+}
+
+.swiper-button-prev {
+  right: calc(50% - 56px) !important;
+}
+
+.swiper-button-next {
+  left: calc(50% - 56px) !important;
+}
+
+.swiper-button-next::after {
+  transform: rotate(180deg);
+}
+
+// Font Awesome Fix
+.fa,
+.fab,
+.fas,
+.far,
+.fal,
+.fad,
+.fat,
+.fa-solid,
+.fa-brands,
+.fa-regular {
+  font-family: inherit; // Reset to let FA classes apply their own font
+}
+
+// Ensure FA fonts take precedence over global font resets
+body {
+
+  [class^="fa-"],
+  [class*=" fa-"],
+  .fab,
+  .fas,
+  .fa-solid,
+  .fa-brands {
+    font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
+  }
+
+  .fa-brands,
+  .fab {
+    font-family: "Font Awesome 6 Brands" !important;
+  }
+
+  .fa-solid,
+  .fas {
+    font-family: "Font Awesome 6 Free" !important;
+    font-weight: 900 !important;
+  }
+}

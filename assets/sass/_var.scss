@@ -1,0 +1,22 @@
+:root {
+  --primary: #219b86;
+  --secondary: #219b86;
+  --accent: #959595;
+  --light: #fff;
+  --dark: #090e16;
+  --font-main: 'Zain', sans-serif;
+}
+
+body,
+* {
+  font-family: var(--font-main) !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #0067a7 0, #0067a7 100%);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #0067a7 0, #0067a7 100%);
+}
