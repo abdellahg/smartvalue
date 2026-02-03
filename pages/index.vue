@@ -92,7 +92,7 @@
             <p class="text-slate-500 font-bold leading-relaxed mb-6">
               {{ $t(`home.s${i}_desc`) }}
             </p>
-            <NuxtLink :to="localePath('/services')" class="text-[#219b86] font-black flex items-center gap-2 group-hover:translate-x-2 transition-transform">
+            <NuxtLink :to="localePath('/contact')" class="text-[#219b86] font-black flex items-center gap-2 group-hover:translate-x-2 transition-transform">
               {{ $t('services_page.cta_button') }}
               <i :class="['fa-solid', $i18n.locale === 'ar' ? 'fa-arrow-left' : 'fa-arrow-right']"></i>
             </NuxtLink>
