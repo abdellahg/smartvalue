@@ -4,8 +4,8 @@
     <section class="relative min-h-screen flex items-center pt-32 pb-20 bg-[#219b86] overflow-hidden" id="intro">
       <!-- Abstract Wave Pattern (Using CSS/SVG) -->
       <!-- Brand Icon Background -->
-      <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-5 pointer-events-none z-0 select-none">
-        <img src="/img/logo/logo_icon.webp" class="w-[80vw] max-w-[1200px] animate-pulse filter brightness-0 invert" alt="Background Shape">
+      <div class="absolute top-[57%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none z-0 select-none">
+        <img src="/img/logo/logo_icon.webp" class="w-[25vw] max-w-[450px] hero-shape-animation filter brightness-0 invert" alt="Background Shape">
       </div>
 
       <div class="container relative z-10 px-4">
@@ -25,7 +25,7 @@
       </div>
     </section>
 
-    <section class="py-32 bg-white relative overflow-hidden" id="about">
+    <section class="py-20 bg-white relative overflow-hidden" id="about">
       <!-- Decorative Background Elements -->
       <div class="absolute top-0 right-0 w-1/3 h-full bg-slate-50/50 -skew-x-12 transform origin-top translate-x-20 pointer-events-none"></div>
       <!-- Brand Icon Background -->
@@ -38,7 +38,7 @@
 
           <!-- Visual Composition Side -->
           <div class="lg:col-span-6 wow animate__animated animate__fadeInRight order-2 lg:order-1">
-            <div class="relative pt-16">
+            <div class="relative pt-4">
               <!-- Main Video Container with stylized frame -->
               <div class="relative rounded-[2.5rem] overflow-hidden shadow-[0_32px_64px_-16px_rgba(33,155,134,0.15)] border-8 border-white bg-white group">
                 <video class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000" autoplay muted loop playsinline>
@@ -216,7 +216,7 @@
 
          <!-- Partners -->
          <div id="partners" class="text-center pt-4" style="scroll-margin-top: 40px;">
-            <div class="inline-block px-4 py-1 rounded-full bg-slate-100 text-slate-500 text-sm font-black mb-6 uppercase tracking-widest">{{ $t('home.partners_title') }}</div>
+            <div class="inline-block px-4 py-1 rounded-full bg-[#219b86]/10 text-[#219b86] text-sm font-black mb-6 uppercase tracking-widest">{{ $t('home.partners_title') }}</div>
 
             <div v-swiper:partnersSwiper="marqueeOptions" class="swiper-container pb-12" :key="'partners-'+$i18n.locale" dir="ltr">
               <div class="swiper-wrapper flex items-center">
@@ -382,6 +382,22 @@ export default {
 
   :deep(.swiper-wrapper) {
     transition-timing-function: linear !important;
+  }
+
+  .hero-shape-animation {
+    animation: hero-float 15s ease-in-out infinite;
+    opacity: 0.05;
+  }
+
+  @keyframes hero-float {
+    0%, 100% {
+      transform: translateY(0) rotate(0deg) scale(1);
+      opacity: 0.04;
+    }
+    50% {
+      transform: translateY(-40px) rotate(10deg) scale(1.1);
+      opacity: 0.07;
+    }
   }
 }
 </style>
