@@ -5,7 +5,7 @@
       <!-- Abstract Wave Pattern (Using CSS/SVG) -->
       <!-- Brand Icon Background -->
       <div class="absolute top-[57%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none z-0 select-none">
-        <img src="/img/logo/logo_icon.webp" class="w-[25vw] max-w-[450px] hero-shape-animation filter brightness-0 invert" alt="Background Shape">
+        <img src="/img/logo/logo_icon.webp" class="w-[80vw] md:w-[25vw] max-w-[500x] hero-shape-animation filter brightness-0 invert" alt="Background Shape">
       </div>
 
       <div class="container relative z-10 px-4">
