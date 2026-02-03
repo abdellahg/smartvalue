@@ -17,9 +17,6 @@
             {{ $t('home.hero_desc') }}
           </p>
           <div class="flex flex-wrap justify-center gap-4">
-            <NuxtLink :to="localePath('/contact')" class="h-14 px-10 rounded-xl bg-white text-[#219b86] font-black text-lg flex items-center justify-center shadow-xl hover:bg-slate-50 transition-all transform hover:-translate-y-1">
-              {{ $t('nav.call_to_action') }}
-            </NuxtLink>
             <NuxtLink :to="localePath('/services')" class="h-14 px-10 rounded-xl border-2 border-white text-white font-black text-lg flex items-center justify-center hover:bg-white hover:text-[#219b86] transition-all transform hover:-translate-y-1">
               {{ $t('nav.link_3') }}
             </NuxtLink>
@@ -37,22 +34,11 @@
       </div>
 
       <div class="container px-4 relative z-10">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center justify-center">
 
           <!-- Visual Composition Side -->
           <div class="lg:col-span-6 wow animate__animated animate__fadeInRight order-2 lg:order-1">
             <div class="relative pt-16">
-              <!-- Floating "Trust" Badge Above the Video -->
-              <div class="absolute -top-8 right-8 z-20 bg-white/90 backdrop-blur-md p-6 rounded-3xl shadow-2xl flex items-center gap-5 transform hover:-translate-y-1 transition-transform cursor-pointer border border-white group/badge">
-                <div class="text-right">
-                  <span class="block text-slate-400 text-xs font-black uppercase tracking-widest leading-none mb-1">{{ $t('home.trust_badge_title') }}</span>
-                  <span class="block text-slate-900 font-black text-xl">{{ $t('home.trust_badge_desc') }}</span>
-                </div>
-                <div class="w-14 h-14 rounded-2xl bg-[#219b86] flex items-center justify-center text-white shadow-lg group-hover/badge:rotate-12 transition-transform">
-                  <i class="fa-solid fa-award text-2xl"></i>
-                </div>
-              </div>
-
               <!-- Main Video Container with stylized frame -->
               <div class="relative rounded-[2.5rem] overflow-hidden shadow-[0_32px_64px_-16px_rgba(33,155,134,0.15)] border-8 border-white bg-white group">
                 <video class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000" autoplay muted loop playsinline>
@@ -73,33 +59,12 @@
             <div class="lg:pl-12">
               <div class="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-[#219b86]/10 text-[#219b86] text-sm font-black mb-8 uppercase tracking-widest border border-[#219b86]/5">
                 <span class="w-2 h-2 bg-[#219b86] rounded-full animate-ping"></span>
-                {{ $t('home.values_subtitle') }}
-              </div>
-
-              <h2 class="text-4xl md:text-6xl font-black text-slate-900 mb-8 leading-[1.1]">
                 {{ $t('home.values_title') }}
-              </h2>
+              </div>
 
               <p class="text-xl text-slate-500 leading-relaxed font-bold mb-12">
                 {{ $t('home.values_desc') }}
               </p>
-
-              <!-- Value Cards Stack -->
-              <div class="space-y-6">
-                <div v-for="i in 3" :key="i" class="flex gap-6 p-6 rounded-[2rem] bg-white border border-slate-100 hover:border-[#219b86]/30 hover:shadow-[0_20px_40px_-20px_rgba(33,155,134,0.1)] transition-all group cursor-pointer active:scale-95">
-                  <div class="w-16 h-16 shrink-0 rounded-2xl bg-slate-50 flex items-center justify-center text-[#219b86] group-hover:bg-[#219b86] group-hover:text-white transition-all shadow-inner">
-                    <i :class="['fa-solid text-2xl', i===1 ? 'fa-bolt-lightning' : (i===2 ? 'fa-fingerprint' : 'fa-lightbulb')]"></i>
-                  </div>
-                  <div>
-                    <h4 class="text-xl font-black text-slate-900 mb-2 group-hover:text-[#219b86] transition-colors">
-                      {{ $t(`values.item_${i}_title`) }}
-                    </h4>
-                    <p class="text-slate-500 font-bold text-base leading-snug">
-                       {{ $t(`values.item_${i}_desc`) }}
-                    </p>
-                  </div>
-                </div>
-              </div>
 
             </div>
           </div>

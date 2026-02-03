@@ -39,7 +39,7 @@ export default (context) => {
                 hero_badge: 'Our Professional Services',
                 hero_title: 'Integrated Digital Solutions to Empower Your Business',
                 hero_desc: 'We dedicate our technical expertise to providing a wide range of services that ensure a smooth and secure digital transformation for your project, focusing on efficiency and innovation.',
-                cta_button: 'Explore More',
+                cta_button: 'ٌRequest Service',
 
                 s1_title: 'Integrated Digital Platforms',
                 s1_desc: 'Designing and developing innovative platforms to enhance effective communication and link different systems inside and outside the organization.',
@@ -233,12 +233,12 @@ export default (context) => {
 
             home: {
                 title: 'Home',
-                hero_title: 'Professional Tech Solutions with Global Standards',
-                hero_desc: 'We merge creativity with technology to deliver innovative digital solutions that help your company grow and excel in the digital age.',
+                hero_title: 'Professional technical solutions with global standards',
+                hero_desc: 'Comprehensive suite of technical services designed to enhance digital transformation and improve operational efficiency.',
 
                 values_subtitle: 'About Us',
                 values_title: 'Our Values',
-                values_desc: 'We are committed to professionalism and innovation in everything we provide, striving to achieve the highest levels of satisfaction for our clients through customized technical solutions that drive their business forward.',
+                values_desc: 'Our values shape every aspect of our work. We put them into practice to create lasting impact and drive effective contributions to digital transformation and innovation.',
 
                 services_subtitle: 'What We Offer',
                 services_title: 'Our Services',

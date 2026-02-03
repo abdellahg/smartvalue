@@ -145,7 +145,7 @@
                 </div>
 
                 <!-- Content -->
-                <div :class="['w-full md:w-1/2', i%2===0 ? 'md:order-2' : 'md:order-1 md:text-right']">
+                <div :class="['w-full md:w-1/2', i%2===0 ? 'md:order-2' : ['md:order-1', $i18n.locale === 'ar' ? 'md:text-right' : '']]">
                    <div class="bg-white p-10 rounded-[3rem] shadow-xl border border-slate-100 group-hover:-translate-y-2 transition-transform duration-500">
                       <div class="md:hidden text-[#219b86] font-black mb-4 text-2xl">{{ $t(`timeline.item_${i}_year`) }}</div>
                       <h3 class="text-2xl font-black text-slate-900 mb-4">{{ $t(`timeline.item_${i}_title`) }}</h3>

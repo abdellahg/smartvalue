@@ -9,7 +9,7 @@
         </svg>
       </div>
       <div class="container relative z-10 px-4">
-        <div class="max-w-4xl mx-auto text-center wow animate__animated animate__fadeInUp">
+        <div class="max-w-4xl mx-auto wow animate__animated animate__fadeInUp" :class="[$i18n.locale === 'ar' ? 'text-right' : 'text-left']">
           <div class="inline-block px-4 py-1 rounded-full bg-white/10 border border-white/20 text-white text-sm font-bold mb-6">
             {{ $t('services_page.hero_badge') }}
           </div>
@@ -46,10 +46,8 @@
             </div>
 
             <!-- Content Side -->
-            <div class="w-full lg:w-1/2 wow animate__animated text-start" :class="i % 2 === 0 ? 'animate__fadeInLeft' : 'animate__fadeInRight'">
-               <div class="inline-block px-4 py-1 rounded-full bg-[#219b86]/10 text-[#219b86] text-xs font-bold mb-4 uppercase tracking-wider">
-                Service 0{{i}}
-              </div>
+            <div class="w-full lg:w-1/2 wow animate__animated" :class="[i % 2 === 0 ? 'animate__fadeInLeft' : 'animate__fadeInRight', $i18n.locale === 'ar' ? 'text-right' : 'text-left']">
+
               <h2 class="text-3xl md:text-4xl font-black text-slate-900 mb-6 leading-tight">
                 {{ $t(`services_page.s${i}_title`) }}
               </h2>
@@ -96,7 +94,7 @@
           <circle cx="500" cy="500" r="300" fill="none" stroke="white" stroke-width="1" opacity="0.05"></circle>
         </svg>
       </div>
-      <div class="container relative z-10 px-4 text-center">
+      <div class="container relative z-10 px-4" :class="[$i18n.locale === 'ar' ? 'text-right' : 'text-left']">
         <h2 class="text-3xl md:text-5xl font-black text-white mb-8">{{ $t('nav.call_to_action') }}</h2>
         <NuxtLink :to="localePath('/contact')" class="px-12 h-16 rounded-2xl bg-[#219b86] text-white font-black text-xl hover:bg-[#1a7a6a] transition-all shadow-2xl transform hover:-translate-y-1 items-center justify-center inline-flex">
           {{ $t('nav.link_7') }}

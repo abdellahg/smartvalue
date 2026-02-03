@@ -115,16 +115,7 @@
               <p class="text-slate-500 font-medium mb-8 leading-relaxed">{{ $t('contact_page.info_desc') }}</p>
 
               <div class="space-y-6">
-                <!-- Phone -->
-                <div class="flex items-start gap-4">
-                  <div class="w-10 h-10 rounded-full bg-teal-50 text-[#219b86] flex items-center justify-center shrink-0">
-                    <i class="fa-solid fa-phone"></i>
-                  </div>
-                  <div>
-                    <span class="block text-xs font-bold text-slate-400 mb-1">{{ $t('contact_page.info_call') }}</span>
-                    <a :href="`tel:${$t('footer.phone')}`" class="text-lg font-black text-slate-900 hover:text-[#219b86] transition-colors dir-ltr block">{{ $t('footer.phone') }}</a>
-                  </div>
-                </div>
+
                 <!-- Email -->
                 <div class="flex items-start gap-4">
                   <div class="w-10 h-10 rounded-full bg-teal-50 text-[#219b86] flex items-center justify-center shrink-0">
