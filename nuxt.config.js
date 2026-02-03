@@ -1,6 +1,6 @@
 const primary = '#219b86' // Updated
 
-const accent = '#1d293e'
+const accent = '#273539'
 
 export default {
   publicRuntimeConfig: {

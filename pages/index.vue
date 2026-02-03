@@ -78,9 +78,8 @@
       <div class="container px-4">
         <div class="text-center mb-16 wow animate__animated animate__fadeInUp">
           <div class="inline-block px-4 py-1 rounded-full bg-[#219b86]/10 text-[#219b86] text-sm font-bold mb-4">
-            {{ $t('home.services_subtitle') }}
+            {{ $t('home.services_title') }}
           </div>
-          <h2 class="text-4xl font-black text-slate-900">{{ $t('home.services_title') }}</h2>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -113,9 +112,8 @@
         <!-- Header -->
         <div class="text-center mb-24 wow animate__animated animate__fadeInUp">
           <div class="inline-block px-5 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white text-sm font-black tracking-widest uppercase mb-6">
-            {{ $t('home.process_subtitle') }}
+            {{ $t('home.process_title') }}
           </div>
-          <h2 class="text-4xl md:text-5xl font-black text-white leading-tight">{{ $t('home.process_title') }}</h2>
         </div>
 
         <!-- Steps Grid -->
@@ -147,7 +145,7 @@
                     </div>
 
                     <!-- Content Card -->
-                    <div class="bg-white/10 backdrop-blur-md rounded-3xl p-6 border border-white/10 hover:bg-white hover:transform hover:-translate-y-2 transition-all duration-300 group cursor-default text-center h-full flex flex-col items-center">
+                    <div class="bg-white/10 backdrop-blur-md rounded-3xl p-6 border border-white/10 group-hover:bg-white group-hover:-translate-y-2 transition-all duration-300 cursor-default text-center h-full flex flex-col items-center">
                          <h4 class="text-xl font-black text-white mb-3 group-hover:text-[#219b86] transition-colors leading-tight min-h-[3.5rem] flex items-center justify-center">
                              {{ $t(`home.step_${i}`) }}
                          </h4>

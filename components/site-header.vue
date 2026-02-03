@@ -73,24 +73,11 @@ export default {
   mounted() {
     this.$nextTick(function(){
       window.addEventListener("scroll", () => {
-        var navbar = document.getElementById("nav");
-        var nav_classes = navbar.classList;
-        if(document.documentElement.scrollTop >= 150) {
-          if (nav_classes.contains("navscroll") === false) {
-            nav_classes.toggle("navscroll");
-          }
-        }
-        else {
-          if (nav_classes.contains("navscroll") === true) {
-            nav_classes.toggle("navscroll");
-          }
-        }
-
         // Scroll Spy for Home Page Sections
         if (this.$route.path === this.localePath('/')) {
           const sections = this.navLinks.filter(n => !n.isPage).map(n => n.link);
           let activeSection = 'intro'; // Default to intro
-          
+
           // Find the active section based on scroll position
           for (let i = sections.length - 1; i >= 0; i--) {
             const section = sections[i];
@@ -105,7 +92,7 @@ export default {
               }
             }
           }
-          
+
           this.activeSection = activeSection;
         }
       })
@@ -146,15 +133,7 @@ export default {
       transition: all .3s linear;
     }
 
-    &.navscroll {
-      padding: 5px 0px;
-      background: rgba(255, 255, 255, 0.98);
-      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
 
-      .logo {
-        height: 50px;
-      }
-    }
 
     .hamburger {
       svg {
@@ -233,13 +212,13 @@ export default {
         flex-direction: column;
         align-items: center; // Align items horizontally
         z-index: 40; // Behind header content but above page content
-        
+
         // Transition settings
         transform: translateY(-100%); // Slide from top or fade
         opacity: 0;
         visibility: hidden;
         transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
-        
+
         box-shadow: none;
         border-bottom-left-radius: 2rem;
         border-bottom-right-radius: 2rem;
@@ -259,11 +238,11 @@ export default {
           transform: translateY(20px);
           opacity: 0;
           transition: all 0.3s ease;
-          
+
           // Staggered animation delay handled via CSS or just global delay
           // We can simulate it roughly or just leave it simple
         }
-        
+
         // When active, show list items
         &.active-nav li {
            transform: translateY(0);
@@ -278,19 +257,19 @@ export default {
         a, button {
           font-size: 1.5rem; // Larger font
           font-weight: 800;
-          color: #0f172a;
+          color: #273539;
           justify-content: center;
           width: auto;
           display: inline-flex;
           padding: 0.5rem 1.5rem;
           border-radius: 1rem;
-          
+
           &:hover {
              background: rgba(33, 155, 134, 0.1);
              color: #219b86;
              transform: translateY(-2px);
           }
-          
+
           &.bg-\[\#219b86\] { // Active state override
              background: #219b86 !important;
              color: white !important;
