@@ -72,9 +72,7 @@ export default {
       navLinks: [
         { link: 'intro' },
         { link: 'about', isPage: true },
-        { link: 'services' },
-        { link: 'clients' },
-        { link: 'partners' }
+        { link: 'services' }
       ]
     }
   }

@@ -218,7 +218,7 @@
          <div id="partners" class="text-center pt-4" style="scroll-margin-top: 40px;">
             <div class="inline-block px-4 py-1 rounded-full bg-slate-100 text-slate-500 text-sm font-black mb-6 uppercase tracking-widest">{{ $t('home.partners_title') }}</div>
 
-            <div v-swiper:partnersSwiper="swiperOptions" class="swiper-container pb-12" :key="'partners-'+$i18n.locale" dir="ltr">
+            <div v-swiper:partnersSwiper="marqueeOptions" class="swiper-container pb-12" :key="'partners-'+$i18n.locale" dir="ltr">
               <div class="swiper-wrapper flex items-center">
                 <div v-for="p in partnersList" :key="p.id" class="swiper-slide px-4">
                   <div class="bg-white/50 backdrop-blur-sm rounded-xl p-4 h-24 border border-slate-100 flex items-center justify-center group hover:bg-white hover:shadow-lg transition-all duration-300">
@@ -258,6 +258,24 @@ export default {
           640: { slidesPerView: 3 },
           768: { slidesPerView: 4 },
           1024: { slidesPerView: 5 }
+        }
+      },
+      marqueeOptions: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+        loop: true,
+        speed: 5000,
+        allowTouchMove: false,
+        freeMode: true,
+        freeModeMomentum: false,
+        autoplay: {
+          delay: 0,
+          disableOnInteraction: false
+        },
+        breakpoints: {
+          640: { slidesPerView: 3 },
+          768: { slidesPerView: 4 },
+          1024: { slidesPerView: 6 }
         }
       },
        techStack: [
@@ -361,5 +379,9 @@ export default {
 <style lang="scss" scoped>
 .home-page {
   scroll-behavior: smooth;
+
+  :deep(.swiper-wrapper) {
+    transition-timing-function: linear !important;
+  }
 }
 </style>

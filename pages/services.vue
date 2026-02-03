@@ -87,18 +87,39 @@
     </section>
 
     <!-- Global CTA -->
-    <section class="py-24 bg-slate-900 relative overflow-hidden">
-      <div class="absolute inset-0 opacity-10">
-        <svg class="w-full h-full" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="500" cy="500" r="400" fill="none" stroke="white" stroke-width="2" opacity="0.1"></circle>
-          <circle cx="500" cy="500" r="300" fill="none" stroke="white" stroke-width="1" opacity="0.05"></circle>
-        </svg>
+    <section class="py-24 bg-[#273539] relative overflow-hidden">
+      <!-- Decorative Elements -->
+      <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-[#219b86]/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2"></div>
+      <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#219b86]/5 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2"></div>
+      
+      <!-- Brand Icon Watermark -->
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.03] pointer-events-none select-none">
+        <img src="/img/logo/logo_icon.webp" class="w-[600px] h-[600px] filter brightness-0 invert" alt="Background Shape">
       </div>
-      <div class="container relative z-10 px-4" :class="[$i18n.locale === 'ar' ? 'text-right' : 'text-left']">
-        <h2 class="text-3xl md:text-5xl font-black text-white mb-8">{{ $t('nav.call_to_action') }}</h2>
-        <NuxtLink :to="localePath('/contact')" class="px-12 h-16 rounded-2xl bg-[#219b86] text-white font-black text-xl hover:bg-[#1a7a6a] transition-all shadow-2xl transform hover:-translate-y-1 items-center justify-center inline-flex">
-          {{ $t('nav.link_7') }}
-        </NuxtLink>
+
+      <div class="container relative z-10 px-4">
+        <div class="max-w-4xl mx-auto">
+          <div class="bg-white/5 backdrop-blur-xl rounded-[4rem] p-12 md:p-20 border border-white/10 text-center shadow-2xl wow animate__animated animate__zoomIn">
+            <div class="inline-flex items-center justify-center w-20 h-20 rounded-3xl bg-[#219b86] text-white text-3xl mb-8 shadow-xl shadow-teal-900/20">
+              <i class="fa-solid fa-rocket animate-bounce"></i>
+            </div>
+            
+            <h2 class="text-3xl md:text-5xl font-black text-white mb-6 leading-tight">
+              {{ $t('nav.call_to_action') }}
+            </h2>
+            
+            <p class="text-xl text-slate-300 mb-10 max-w-2xl mx-auto font-medium leading-relaxed">
+              {{ $t('home.contact_desc_footer') }}
+            </p>
+
+            <div class="flex flex-wrap justify-center gap-6">
+              <NuxtLink :to="localePath('/contact')" class="group px-12 h-16 rounded-2xl bg-[#219b86] text-white font-black text-xl hover:bg-[#1a7a6a] transition-all shadow-2xl shadow-teal-900/40 transform hover:-translate-y-1 items-center justify-center inline-flex gap-3">
+                <span>{{ $t('nav.link_7') }}</span>
+                <i :class="['fa-solid transition-transform', $i18n.locale === 'ar' ? 'fa-arrow-left group-hover:-translate-x-2' : 'fa-arrow-right group-hover:translate-x-2']"></i>
+              </NuxtLink>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </div>
