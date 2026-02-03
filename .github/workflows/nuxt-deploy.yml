@@ -31,6 +31,6 @@ jobs:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: domains/smart-values.sa/public_html/ 
+          server-dir: ${{ secrets.FTP_PATH }}/
           local-dir: dist/ # For Nuxt 3 static, use .output/public/
           dangerous-clean-slate: true
