@@ -105,8 +105,8 @@
     <!-- 4. Process Section -->
     <section class="py-24 bg-[#219b86] overflow-hidden relative">
       <!-- Brand Icon Background -->
-      <div class="absolute top-0 right-0 opacity-[0.07] pointer-events-none select-none transform translate-x-1/3 -translate-y-1/4">
-        <img src="/img/logo/logo_icon.webp" class="w-[800px] h-[800px] rotate-12 filter brightness-0 invert" alt="Background Shape">
+      <div class="absolute top-0 right-0 opacity-[0.07] pointer-events-none select-none transform translate-x-1/4 -translate-y-1/4">
+        <img src="/img/logo/logo_icon.webp" class="w-[300px] md:w-[600px] lg:w-[800px] h-auto rotate-12 filter brightness-0 invert" alt="Background Shape">
       </div>
       <div class="container px-4 relative z-10">
         <!-- Header -->
@@ -139,7 +139,7 @@
                         </div>
 
                         <!-- Badge Number -->
-                        <div class="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-yellow-400 text-[#219b86] font-black flex items-center justify-center shadow-lg border-2 border-[#219b86] text-sm">
+                        <div class="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-white text-[#219b86] font-black flex items-center justify-center shadow-lg border-2 border-[#219b86] text-sm">
                             {{ i }}
                         </div>
                     </div>
