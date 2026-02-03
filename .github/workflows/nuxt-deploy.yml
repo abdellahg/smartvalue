@@ -1,36 +1,36 @@
 name: Build and Deploy Nuxt
 
 on:
-push:
-branches: [ main ]
+  push:
+    branches: [ main ]
 
 jobs:
-build-and-deploy:
-runs-on: ubuntu-latest
+  build-and-deploy:
+    runs-on: ubuntu-latest
 
-steps:
-- name: Checkout
-uses: actions/checkout@v4
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
 
-- name: Use Node.js
-uses: actions/setup-node@v4
-with:
-node-version: '20'
+      - name: Use Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
 
-- name: Install dependencies
-run: npm install
+      - name: Install dependencies
+        run: npm install
 
-- name: Build (Nuxt 2 - static)
-run: npm run generate
-# For Nuxt 3 static, use:
-# run: npm run build && npm run generate
+      - name: Build (Nuxt 2 - static)
+        run: npm run generate
+        # For Nuxt 3 static, use:
+        # run: npm run build && npm run generate
 
-- name: Deploy via FTP
-uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-with:
-server: ${{ secrets.ftp://147.93.88.83}}
-username: ${{ secrets.u890544709}}
-password: ${{ secrets.PCzLTjYk9YR]$r3I}}
-server-dir: ${{ secrets.domains/smart-values.sa/public_html}}
-local-dir: dist/ # For Nuxt 3 static, use .output/public/
-dangerous-clean-slate: true
+      - name: Deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: ${{ secrets.FTP_PATH }}/
+          local-dir: dist/ # For Nuxt 3 static, use .output/public/
+          dangerous-clean-slate: true
