@@ -37,51 +37,51 @@ export default (context) => {
 
             services_page: {
                 hero_badge: 'Our Professional Services',
-                hero_title: 'Integrated Digital Solutions to Empower Your Business',
-                hero_desc: 'We dedicate our technical expertise to providing a wide range of services that ensure a smooth and secure digital transformation for your project, focusing on efficiency and innovation.',
-                cta_button: 'ٌRequest Service',
+                hero_title: 'We Deliver Integrated Digital Solutions to Empower Your Business',
+                hero_desc: 'We transform technical complexity into stable, interconnected ecosystems through digital solutions that enhance operational efficiency and support growth and sustainability.',
+                cta_button: 'Request Service',
 
                 s1_title: 'Integrated Digital Platforms',
-                s1_desc: 'Designing and developing innovative platforms to enhance effective communication and link different systems inside and outside the organization.',
-                s1_p1: 'Digital Customer Experience (DCX) Platforms',
-                s1_p2: 'System Integration & API Connectivity',
-                s1_p3: 'Digital Collaboration & Teamwork Platforms',
-                s1_p4: 'User Journey Analysis & Digital Transformation',
+                s1_desc: 'We design integrated digital platforms that seamlessly connect systems and services, supporting enterprise integration through scalable APIs and developer portals.',
+                s1_p1: 'Unified API management to enable governance and operational efficiency',
+                s1_p2: 'Developer portals to empower developers and simplify access to digital services',
+                s1_p3: 'Secure and flexible integration of internal and external systems with scalability',
+                s1_p4: 'Building interconnected digital service ecosystems to accelerate integration and innovation',
 
-                s2_title: 'Migration to the Cloud',
-                s2_desc: 'Innovative migration solutions that help organizations improve operational efficiency, ensure business continuity, and reduce risks.',
-                s2_p1: 'Comprehensive Cloud Transformation Strategy',
-                s2_p2: 'Secure Data & Systems Migration',
-                s2_p3: 'Hybrid/Multi-Cloud Infrastructure Management',
-                s2_p4: 'Cloud Cost & Performance Optimization',
+                s2_title: 'Cloud Migration',
+                s2_desc: 'We provide cloud migration services starting from system and data assessment to delivering a secure and stable cloud environment that supports future growth.',
+                s2_p1: 'Assessing system and data readiness before migration to ensure stability',
+                s2_p2: 'Secure and structured migration of systems and data',
+                s2_p3: 'Post-migration system integration to ensure business continuity',
+                s2_p4: 'Support for Hybrid and Multi-Cloud environments based on business and operational requirements',
 
-                s3_title: 'Service & Data Analysis & Monitoring',
-                s3_desc: 'Advanced solutions for data analysis and monitoring to improve performance and support accurate data-driven decisions.',
-                s3_p1: 'Big Data Analysis',
-                s3_p2: 'Real-time System Performance Monitoring',
-                s3_p3: 'Advanced Predictive Reports & Analytics',
-                s3_p4: 'Interactive Decision-Making Dashboards',
+                s3_title: 'Service & Data Monitoring and Analytics',
+                s3_desc: 'We provide advanced solutions to monitor digital services and data, enabling decision-making and transforming data into value.',
+                s3_p1: 'Monitoring services and APIs to ensure stability and improve performance',
+                s3_p2: 'Tracking data flows, usage volume, and consumption patterns',
+                s3_p3: 'Analyzing workloads, peak times, and errors to improve operational efficiency',
+                s3_p4: 'Smart dashboards and analytics to support decision-making and data-driven ROI',
 
-                s4_title: 'AI and Robotics',
-                s4_desc: 'Employing AI and robotics technologies to reduce operational costs, increase productivity, and speed up task completion.',
-                s4_p1: 'Developing Scalable Machine Learning models',
-                s4_p2: 'Robotic Process Automation (RPA)',
-                s4_p3: 'Conversational AI & Support Systems',
-                s4_p4: 'AI-driven Predictive Analytics',
+                s4_title: 'Artificial Intelligence & Robotics',
+                s4_desc: 'We develop AI solutions aligned with real business needs and deliver measurable impact.',
+                s4_p1: 'Building custom use cases based on business requirements',
+                s4_p2: 'Intelligent automation powered by analytics and data',
+                s4_p3: 'Improving productivity and reducing operational costs',
+                s4_p4: 'Solutions that create tangible performance impact',
 
                 s5_title: 'Internet of Things (IoT) Solutions',
-                s5_desc: 'Smart solutions to link assets and data into an integrated network to improve operational efficiency and enhance control and monitoring.',
-                s5_p1: 'Connecting smart devices and sensors',
-                s5_p2: 'Real-time sensor data analysis',
-                s5_p3: 'Industrial and office process automation',
-                s5_p4: 'Optimizing resource consumption efficiency',
+                s5_desc: 'IoT solutions that enhance smart operations, enable monitoring and control, optimize processes, and improve operational efficiency.',
+                s5_p1: 'Designing custom solutions based on use cases',
+                s5_p2: 'Connecting sensors and collecting data from multiple sources',
+                s5_p3: 'Integrating sensors with data platforms and analytics',
+                s5_p4: 'Flexible and scalable solutions based on business requirements',
 
-                s6_title: 'Enterprise Technical Solutions',
-                s6_desc: 'Integrated solutions in Information Technology Service Management (ITSM) and Customer Relationship Management (CRM) to improve user experience.',
-                s6_p1: 'ITSM implementation for technical services',
-                s6_p2: 'Custom CRM solutions for customer relationship',
-                s6_p3: 'Enterprise workflow & process automation',
-                s6_p4: 'Digital enhancement of employee/customer experience'
+                s6_title: 'Enterprise Technology Solutions',
+                s6_desc: 'We develop integrated enterprise solutions that improve operational efficiency and enhance user experience.',
+                s6_p1: 'Integrating ITSM systems with operational systems',
+                s6_p2: 'Flexible integration of administrative systems',
+                s6_p3: 'Process and workflow automation',
+                s6_p4: 'Supporting data-driven decision-making'
             },
 
             about: {
@@ -113,18 +113,38 @@ export default (context) => {
             timeline: {
                 sub_title: 'Our Journey',
                 title: 'A History of Achievements',
+
                 item_1_year: '2017',
-                item_1_title: 'Establishment',
-                item_1_desc: 'Launch of Smart Values in Riyadh.',
+                item_1_title: 'Foundation',
+                item_1_desc: 'Smart Values was launched in Riyadh, Saudi Arabia, and began delivering technology solutions.',
+
                 item_2_year: '2019',
-                item_2_title: 'Expansion',
-                item_2_desc: 'Expanding the scope of services to include cybersecurity solutions.',
-                item_3_year: '2021',
-                item_3_title: 'Partnerships',
-                item_3_desc: 'Strategic partnerships with major global technology companies.',
-                item_4_year: '2023',
-                item_4_title: 'Leadership',
-                item_4_desc: 'Receiving recognition awards in the field of digital transformation.'
+                item_2_title: 'Team Building',
+                item_2_desc: 'Building a specialized technical team with a Saudi spirit and establishing a professional execution methodology.',
+
+                item_3_year: '2020',
+                item_3_title: 'Technical Consulting',
+                item_3_desc: 'Provided more than 30 technical consultations for various entities in digital transformation.',
+
+                item_4_year: '2021',
+                item_4_title: 'Partnerships & Technologies',
+                item_4_desc: 'Signed partnerships with global technology providers to enable clients to leverage modern technologies.',
+
+                item_5_year: '2023',
+                item_5_title: 'Expansion',
+                item_5_desc: 'Expanded service offerings and strengthened presence in local and global digital conferences.',
+
+                item_6_year: '2024',
+                item_6_title: 'Projects & Contracts',
+                item_6_desc: 'Signed strategic technology project contracts with government and private entities, becoming an active partner in digital transformation initiatives.',
+
+                item_7_year: '2025',
+                item_7_title: 'Innovation & Impact',
+                item_7_desc: 'Expanded technical impact and developed innovative digital solutions supporting transformation initiatives in the Kingdom.',
+
+                item_8_year: '2026',
+                item_8_title: 'National Impact & Sustainability',
+                item_8_desc: 'Delivering professional services and advanced technology solutions to maximize digital transformation impact aligned with Vision 2030.'
             },
 
             contact_page: {

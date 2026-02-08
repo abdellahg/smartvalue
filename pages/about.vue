@@ -137,7 +137,7 @@
           <div class="absolute left-1/2 top-0 bottom-0 w-1 bg-slate-200 -translate-x-1/2 hidden md:block"></div>
 
           <div class="space-y-24">
-            <div v-for="i in 4" :key="i" class="relative group wow animate__animated animate__fadeInUp">
+            <div v-for="i in 8" :key="i" class="relative group wow animate__animated animate__fadeInUp">
               <div class="flex flex-col md:flex-row items-center gap-12">
                 <!-- Year indicator as dot -->
                 <div class="absolute left-1/2 -translate-x-1/2 w-16 h-16 rounded-full bg-white border-4 border-[#219b86] flex items-center justify-center z-10 hidden md:flex group-hover:bg-[#219b86] group-hover:text-white transition-all shadow-xl">

@@ -56,17 +56,17 @@
               </p>
 
               <!-- Features List (Conditional for first 4 with detail keys) -->
-              <div v-if="i <= 4" class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">
+              <div v-if="i <= 4" class="grid grid-cols-1 sm:grid-cols-1 gap-6 mb-12">
                 <div v-for="p in 4" :key="p" class="flex items-center gap-4 group">
                   <div class="w-6 h-6 rounded-full bg-[#219b86]/10 flex items-center justify-center shrink-0 group-hover:bg-[#219b86] transition-colors">
                     <i class="fa-solid fa-check text-[10px] text-[#219b86] group-hover:text-white"></i>
                   </div>
-                  <span class="text-lg font-black text-slate-700">{{ $t(`services_page.s${i}_p${p}`) }}</span>
+                  <span class="text-md font-black text-slate-700">{{ $t(`services_page.s${i}_p${p}`) }}</span>
                 </div>
               </div>
 
               <!-- Features List (For 5 and 6) -->
-              <div v-else class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">
+              <div v-else class="grid grid-cols-1 sm:grid-cols-1 gap-6 mb-12">
                 <div v-for="p in 4" :key="p" class="flex items-center gap-4 group">
                   <div class="w-6 h-6 rounded-full bg-[#219b86]/10 flex items-center justify-center shrink-0 group-hover:bg-[#219b86] transition-colors">
                     <i class="fa-solid fa-check text-[10px] text-[#219b86] group-hover:text-white"></i>
